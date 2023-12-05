@@ -33,24 +33,24 @@ public class CalculatorServiceTests {
     @ParameterizedTest
     @MethodSource("provideParams")
     public void shouldReturnAdditional(int a, int b) {
-        assertTrue(out.addition(a, b).contains("" + (a + b)));
+        assertEquals(out.addition(a, b), a + b);
     }
 
     @ParameterizedTest
     @MethodSource("provideParams")
     public void shouldReturnSubtraction(int a, int b) {
-        assertTrue(out.division(a, b).contains("" + (a - b)));
+        assertEquals(out.division(a, b), a - b);
     }
 
     @ParameterizedTest
     @MethodSource("provideParams")
     public void shouldReturnMultiply(int a, int b) {
-        assertTrue(out.multiplication(a, b).contains("" + (a - b)));
+        assertEquals(out.multiplication(a, b), a * b);
     }
 
     @ParameterizedTest
     @MethodSource("provideParams")
     public void shouldReturnDivide(int a, int b) {
-        assertTrue(out.division(a, b).contains("" + (a - b)));
+        assertEquals(out.division(a, b), (float) a / b);
     }
 }
