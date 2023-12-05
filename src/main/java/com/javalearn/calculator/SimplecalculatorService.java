@@ -9,23 +9,23 @@ public class SimplecalculatorService implements ISimplecalculatorService {
         return "Добро пожаловать в калькулятор";
     }
 
-    public String addition(int num1, int num2) {
-        return num1 + " + " + num2 + " = " + (num1 + num2);
+    public int addition(int num1, int num2) {
+        return (num1 + num2);
     }
 
-    public String subtraction(int num1, int num2) {
-        return num1 + " - " + num2 + " = " + (num1 - num2);
+    public int subtraction(int num1, int num2) {
+        return (num1 - num2);
     }
 
-    public String multiplication(int num1, int num2) {
-        return num1 + " * " + num2 + " = " + (num1 * num2);
+    public int multiplication(int num1, int num2) {
+        return (num1 * num2);
     }
 
-    public String division(int num1, int num2) {
+    public float division(int num1, int num2) {
         if (num2 == 0)
             throw new IllegalArgumentException("На ноль делить нельзя");
         else
-            return num1 + " / " + num2 + " = " + (num1 / (float) num2);
+            return (num1 / (float) num2);
     }
 
 }

@@ -18,6 +18,7 @@ public class CalculatorServiceTests {
     public static Stream<Arguments> provideParams() {
         return Stream.of(
                 Arguments.of(10, 5),
+                Arguments.of(-10, 7),
                 Arguments.of(32, 32));
     }
 
@@ -39,7 +40,7 @@ public class CalculatorServiceTests {
     @ParameterizedTest
     @MethodSource("provideParams")
     public void shouldReturnSubtraction(int a, int b) {
-        assertEquals(out.division(a, b), a - b);
+        assertEquals(out.subtraction(a, b), a - b);
     }
 
     @ParameterizedTest
